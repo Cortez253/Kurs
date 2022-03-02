@@ -1,0 +1,24 @@
+﻿<Window x:Class="Kurs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="345.5" Width="489.5" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF8FC3AC" Offset="0"/>
+            <GradientStop Color="#FF019751" Offset="0.996"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Button x:Name="InputButton" Content="Войти" HorizontalAlignment="Left" Margin="123,232,0,0" VerticalAlignment="Top" Width="98" FontSize="15" Height="29" Background="#FFCDF1E4" BorderBrush="#FFCDF1E4" Foreground="#FF3C3C3C" Click="InputButton_Click"/>
+        <TextBox x:Name="LoginTextBox" Height="30" Margin="123,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="228" FontSize="15" Background="#FFCDF1E4" BorderBrush="#FFCDF1E4" Foreground="#FF3C3C3C"/>
+        <Label Content="Авторизация" Margin="169,27,0,0" FontSize="22" Height="45" VerticalAlignment="Top" FontFamily="Impact" Foreground="#FF3C3C3C" HorizontalAlignment="Left" Width="140"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="123,179,0,0" VerticalAlignment="Top" Width="228" Height="30" FontSize="15" BorderBrush="#FFCDF1E4" Background="#FFCDF1E4" Foreground="#FF3C3C3C"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="123,72,0,0" VerticalAlignment="Top" Width="64" FontSize="15" FontWeight="Bold" Foreground="#FF3C3C3C"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="123,145,0,0" VerticalAlignment="Top" Width="77" FontSize="15" FontWeight="Bold" Foreground="#FF3C3C3C"/>
+        <Button x:Name="RegistrationButton" Content="Регистрация" HorizontalAlignment="Left" Margin="237,232,0,0" VerticalAlignment="Top" Width="114" Height="29" FontSize="15" BorderBrush="#FFCDF1E4" Background="#FFCDF1E4" Foreground="#FF3C3C3C" Click="RegistrationButton_Click"/>
+    </Grid>
+</Window>

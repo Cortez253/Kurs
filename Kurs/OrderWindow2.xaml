@@ -1,0 +1,54 @@
+﻿<Window x:Class="Kurs.OrderWindow2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        mc:Ignorable="d"
+        Title="Список заказов" Height="396.997" Width="894.713" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA3FFD5" Offset="0"/>
+                <GradientStop Color="#FF019751" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Menu Height="25" VerticalAlignment="Top" Background="#FFA3FFD5">
+            <MenuItem Header="Файл" FontSize="15">
+                <MenuItem x:Name="AddOrderMenuItem" Header="Добавить новый заказ" Click="AddOrderMenuItem_Click" />
+                <MenuItem x:Name="ClientMenuItem" Header="Открыть окно Клиенты" Click="ClientMenuItem_Click" />
+                <Separator />
+                <MenuItem x:Name="ExitItem" Header="Выход" Click="ExitItem_Click" />
+            </MenuItem>
+            <MenuItem Header="Экспорт данных" FontSize="15">
+                <MenuItem x:Name="AddExcel" Header="Отправить данные в Excel" Click="AddExcel_Click" />
+
+            </MenuItem>
+        </Menu>
+        <DataGrid AutoGenerateColumns="False" CanUserSortColumns="True" CanUserAddRows="True" CanUserDeleteRows="True" x:Name="OrderGrid" HorizontalAlignment="Left" Height="283" Margin="10,63,0,0" VerticalAlignment="Top" Width="855" FontSize="15" BorderBrush="#FFCDF1E4" Background="#FFCDF1E4" Foreground="Black" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Клиент"   Binding = "{Binding Clients}" />
+                <DataGridTextColumn Header="Авто"  Binding = "{Binding Avto}" />
+                <DataGridTextColumn Header="Услуга"  Binding = "{Binding Services}" />
+                <DataGridTextColumn Header="Дата заказа" Binding = "{Binding Date_order}" />
+                <DataGridTextColumn Header="Время выполнения" Binding = "{Binding Period_of_execution}" />
+                <DataGridTextColumn Header="Статус заказа" Binding = "{Binding Order_status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="TextBoxSerch" HorizontalAlignment="Left" Height="23" Margin="114,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBoxSerch_TextChanged" FontSize="15"/>
+        <Label Content="Поиск:" HorizontalAlignment="Left" Margin="53,27,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="Фильтрация:" HorizontalAlignment="Left" Margin="329,27,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <ComboBox x:Name="SortingComboBox" HorizontalAlignment="Left" Margin="430,30,0,0" VerticalAlignment="Top" Width="178" Height="23" SelectionChanged="SortingComboBox_SelectionChanged">
+            <TextBlock Selector.IsSelected="True" x:Name="Сompleted_order"><Run Text="Выполняемые заказы"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Finish_order"><Run Text="Завершенные заказы"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Engine_repair"><Run Text="Услуга: Ремонт двигателя"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Oil_change"><Run Text="Услуга: Замена масла"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Diagnostics"><Run Text="Услуга: Диагностика"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Replacement_of_liquids"><Run Text="Услуга: Замена фильтров"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Autoelectrics_repair"><Run Text="Услуга: Ремонт автоэлектрики"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="Сonditioners_repair"><Run Text="Услуга: Ремонт автокондиционеров"/></TextBlock>
+            <TextBlock Selector.IsSelected="True" x:Name="All_order"><Run Text="Все заказы"/></TextBlock>
+        </ComboBox>
+
+    </Grid>
+</Window>

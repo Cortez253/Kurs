@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="133046d6af884e1e871191cac8d8ccf7" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="avtoModel.Avto" Width="1.5" PointX="1.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="avtoModel.Clients" Width="1.5" PointX="6.375" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="avtoModel.Orders" Width="1.5" PointX="3.875" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="avtoModel.Services" Width="1.5" PointX="1.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="avtoModel.Users" Width="1.5" PointX="5.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="avtoModel.FK_order2" ManuallyRouted="false" />
+        <AssociationConnector Association="avtoModel.FK_order1" ManuallyRouted="false" />
+        <AssociationConnector Association="avtoModel.FK_order3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
